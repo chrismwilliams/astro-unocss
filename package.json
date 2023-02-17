@@ -1,0 +1,24 @@
+{
+  "name": "astro-unocss",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.49.6",
+    "astro": "^2.0.13",
+    "unocss": "^0.49.6"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vite"
+      ]
+    }
+  }
+}
