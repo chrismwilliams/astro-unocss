@@ -1,9 +1,9 @@
 ---
-import { transformDate } from '@/utils';
-import type {CollectionEntry} from 'astro:content'
+import { transformDate } from "@/utils";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-	post: CollectionEntry<'blog'>
+	post: CollectionEntry<"blog">;
 	reverse?: boolean;
 }
 const { post, reverse = false } = Astro.props;
@@ -12,17 +12,24 @@ const date = transformDate(post.data.publishDate);
 ---
 
 <li class="grid grid-cols-2">
-	<div class:list={["border-dashed border-gray-400", reverse ? 'pl-16 border-l order-last' : 'pr-16 border-r text-right']}>
-		<time datetime={datetime} class="block text-gray-300 font-mono text-sm">{date}</time>
+	<div
+		class:list={[
+			"border-dashed border-gray-400",
+			reverse ? "pl-16 border-l order-last" : "pr-16 border-r text-right",
+		]}
+	>
+		<time datetime={datetime} class="block font-mono text-sm text-gray-300">{date}</time>
 		<h2 class="mt-5 text-5xl">
 			{post.data.title}
 		</h2>
-		<p class="mt-10 c-gray-300 font-200">
+		<p class="mt-10 font-200 c-gray-300">
 			{post.data.description}
 		</p>
-		<a href={`/posts/${post.slug}`} class="block mt-10 text-gray-300 hover:text-white">
-			Read More	<span class="ml-1">&rarr;</span>
+		<a href={`/posts/${post.slug}`} class="mt-10 block text-gray-300 hover:text-white">
+			Read More <span class="ml-1">&rarr;</span>
 		</a>
 	</div>
-	<div class="flex justify-center items-center"><span class="i-logos-astro?mask text-9xl"></span></div>
+	<div class="flex items-center justify-center">
+		<span class="i-logos-astro?mask text-9xl"></span>
+	</div>
 </li>

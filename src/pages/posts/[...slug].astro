@@ -1,13 +1,14 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '@/layout'
-import { transformDate } from '@/utils';
+import { getCollection } from "astro:content";
+import Layout from "@/layout";
+import { transformDate } from "@/utils";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }));
+	const blogEntries = await getCollection("blog");
+	return blogEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
 }
 
 const { entry } = Astro.props;
@@ -15,10 +16,11 @@ const { Content } = await entry.render();
 const datetime = entry.data.publishDate.toISOString();
 const date = transformDate(entry.data.publishDate);
 ---
+
 <Layout title={entry.data.title}>
-  <article class="prose prose-invert">
-    <time datetime={datetime} text="sm gray-300" class="font-mono">{date}</time>
-    <h1 class="mb-16">{entry.data.title}</h1>
-    <Content />
-  </article>
+	<article class="prose prose-invert">
+		<time datetime={datetime} text="sm gray-300" class="font-mono">{date}</time>
+		<h1 class="mb-16">{entry.data.title}</h1>
+		<Content />
+	</article>
 </Layout>

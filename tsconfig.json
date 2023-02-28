@@ -1,11 +1,11 @@
 {
-  "extends": "astro/tsconfigs/strictest",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": ["src/components/*.astro"],
-      "@/layout": ["src/layouts/Layout.astro"],
-      "@/utils": ["src/utils/index.ts"]
-    }
-  }
+	"extends": "astro/tsconfigs/strictest",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/components/*": ["src/components/*.astro"],
+			"@/layout": ["src/layouts/Layout.astro"],
+			"@/utils": ["src/utils/index.ts"]
+		}
+	}
 }
