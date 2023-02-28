@@ -1,23 +1,22 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const blogCollection = await getCollection('blog');
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="p10 text-center">
-    <div>
-      <div class="i-logo"></div>
-    </div>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      Check out the <code>src/pages</code> directory to get started.<br />
-    </p>
-    <ul role="list" class="link-card-grid">
+<Layout title="Welcome to Astro UnoCSS.">
+  <h1 class="text-4xl">Welcome to <span>Astro</span> UnoCSS</h1>
+  <p class="mt-2 font-200 max-w-70ch">
+    This is a very simple Astro site that uses UnoCSS styling, and @unocss/preset typography for markdown content
+  </p>
+  <ul role="list" class="mt-32 flex flex-col gap-y-32">
+    {blogCollection.map((blogPostEntry, i) => (
       <Card
-        href="/foo"
-        title="/foo"
-        body="Go to page foo."
+        post={blogPostEntry}
+        reverse={(i+1) % 2 === 0}
       />
-    </ul>
-  </main>
+    ))}
+  </ul>
 </Layout>

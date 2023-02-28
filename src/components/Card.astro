@@ -1,20 +1,28 @@
 ---
-export interface Props {
-	title: string;
-	body: string;
-	href: string;
+import { transformDate } from '@/utils';
+import type {CollectionEntry} from 'astro:content'
+
+interface Props {
+	post: CollectionEntry<'blog'>
+	reverse?: boolean;
 }
-const { href, title, body } = Astro.props as Props;
+const { post, reverse = false } = Astro.props;
+const datetime = post.data.publishDate.toISOString();
+const date = transformDate(post.data.publishDate);
 ---
 
-<li class="border rounded inline-block px4 py2 m2 hover:shadow">
-	<a href={href}>
-		<h2 class="font-bold">
-			{title}
-			<span>&rarr;</span>
+<li class="grid grid-cols-2">
+	<div class:list={["border-dashed border-gray-400", reverse ? 'pl-16 border-l order-last' : 'pr-16 border-r text-right']}>
+		<time datetime={datetime} class="block text-gray-300 font-mono text-sm">{date}</time>
+		<h2 class="mt-5 text-5xl">
+			{post.data.title}
 		</h2>
-		<p>
-			{body}
+		<p class="mt-10 c-gray-300 font-200">
+			{post.data.description}
 		</p>
-	</a>
+		<a href={`/posts/${post.slug}`} class="block mt-10 text-gray-300 hover:text-white">
+			Read More	<span class="ml-1">&rarr;</span>
+		</a>
+	</div>
+	<div class="flex justify-center items-center"><span class="i-logos-astro?mask text-9xl"></span></div>
 </li>
