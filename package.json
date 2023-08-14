@@ -24,7 +24,7 @@
 		"@unocss/eslint-config": "^0.50.1",
 		"@unocss/preset-attributify": "^0.50.1",
 		"@unocss/preset-icons": "^0.50.1",
-		"@unocss/preset-typography": "^0.50.1",
+		"@unocss/preset-typography": "^0.55.0",
 		"@unocss/transformer-variant-group": "^0.50.1",
 		"eslint": "^8.35.0",
 		"eslint-config-prettier": "^8.6.0",
