@@ -10,8 +10,8 @@ import {
 export default defineConfig({
 	transformers: [transformerDirectives()],
 	presets: [
-		presetAttributify(),
 		presetUno(),
+		presetAttributify(),
 		presetTypography({
 			cssExtend: {
 				hr: {
