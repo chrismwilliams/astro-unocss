@@ -21,7 +21,7 @@
 		"@types/prettier": "^3.0.0",
 		"@typescript-eslint/eslint-plugin": "^6.4.0",
 		"@typescript-eslint/parser": "^6.4.0",
-		"@unocss/eslint-config": "^0.55.1",
+		"@unocss/eslint-config": "^0.55.7",
 		"@unocss/preset-attributify": "^0.55.1",
 		"@unocss/preset-icons": "^0.55.1",
 		"@unocss/preset-typography": "^0.55.1",
