@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@unocss/reset':
-    specifier: ^0.55.1
-    version: 0.55.1
+    specifier: ^0.56.2
+    version: 0.56.2
   astro:
     specifier: ^2.10.12
     version: 2.10.12
@@ -1367,6 +1367,10 @@ packages:
 
   /@unocss/reset@0.55.1:
     resolution: {integrity: sha512-WMMxun0HtS8WD4q7F3nWM9Yal/eDt0KviMlVIqcCdlQYdaOHyVDwpON3htZrGL/HwrbofUYYgJXp59yyrAmrRw==}
+    dev: false
+
+  /@unocss/reset@0.56.2:
+    resolution: {integrity: sha512-RFI5XXb0Oc0WyarL6x4gti3/bKPqY9LKB/kHoEx05aZhFFtz1GzUYzqFdDakieS6FM2Jc1IFWpeC6Y3b7xce8A==}
     dev: false
 
   /@unocss/scope@0.55.1:
