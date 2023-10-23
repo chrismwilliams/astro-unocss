@@ -14,7 +14,7 @@
 	"dependencies": {
 		"@unocss/reset": "^0.55.1",
 		"astro": "^2.10.12",
-		"unocss": "^0.55.1"
+		"unocss": "^0.57.0"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.44.2",
