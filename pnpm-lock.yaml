@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^0.55.1
     version: 0.55.1(eslint@8.47.0)(typescript@5.1.6)
   '@unocss/preset-attributify':
-    specifier: ^0.55.1
-    version: 0.55.1
+    specifier: ^0.57.1
+    version: 0.57.1
   '@unocss/preset-icons':
     specifier: ^0.55.1
     version: 0.55.1
@@ -1259,6 +1259,10 @@ packages:
   /@unocss/core@0.55.1:
     resolution: {integrity: sha512-hZffURZtvH72UvobL9anzE1t7PDldBa89fxWVIsjLb8KHReNfcOv8uEepce0ODUfGrdWPbij017XG/HY5YUexg==}
 
+  /@unocss/core@0.57.1:
+    resolution: {integrity: sha512-cqQW/4gCuk+bFMPg9lBanuRNQ9Lx1l4PpMN/6uKxI5WROpq7ce/Xb4uGvAxKLh3ITtFSpXs2cLfsy7QD6cVD/Q==}
+    dev: true
+
   /@unocss/eslint-config@0.55.1(eslint@8.47.0)(typescript@5.1.6):
     resolution: {integrity: sha512-P16ahDXsXDlK+8GsKSA97uST6Qf7sCklnFADCqg3z0DESPw+HH8oshuNa0Iz9auC5/oUGA9tekX8u5W6jDcMRw==}
     engines: {node: '>=14'}
@@ -1315,6 +1319,13 @@ packages:
     resolution: {integrity: sha512-DX3PMeW0atZiCu3YULVbVAhuvy2bx27hAbE9Wo+QGs+MY0hK6+ilsWqsDzNmScHze5zW2HlNwucdtPs8TiV7dA==}
     dependencies:
       '@unocss/core': 0.55.1
+    dev: false
+
+  /@unocss/preset-attributify@0.57.1:
+    resolution: {integrity: sha512-pvGQHaqBlB0jQysWhNbcKLOGrkj8b53k0sAa9LYxQjD1fa8t/dwbuMpZv4twX+gysF0vBhxRoWBPLH1/S6zRZg==}
+    dependencies:
+      '@unocss/core': 0.57.1
+    dev: true
 
   /@unocss/preset-icons@0.55.1:
     resolution: {integrity: sha512-gml2I6hGbBDrGaqq4TJu81pIeUvR3m/y/wH2BovIYicVhuk5NyBLTXJ7NxJY5y5FmE0AmNM1/Ctju3ZiDvj/pA==}
